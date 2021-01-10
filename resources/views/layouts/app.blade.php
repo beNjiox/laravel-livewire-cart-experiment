@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="w-full border-l-4 border-gray-50 mx-auto mt-6 md:w-1/2">
-    <div class="flex justify-between mb-20">
+    <div class="flex justify-between mb-20 h-3">
         <h1 class="text-xl font-medium text-center pl-2 underline">Hello Cart</h1>
         <livewire:cart-main-counter />
     </div>
