@@ -1,0 +1,13 @@
+- [ ] prepare simple UI
+    - [ ] index : list of products
+    - [ ] page of product
+- [ ] prepare db
+    - [ ] `carts`
+        - [ ] `cart_amount`
+        - [ ] `shipping_fee`
+        - [ ] `total_amount`
+    - [ ] `cart_items`
+        - [ ] `product_id`
+        - [ ] `quantity`
+    - [ ] `products`
+- [ ] Update  UI
