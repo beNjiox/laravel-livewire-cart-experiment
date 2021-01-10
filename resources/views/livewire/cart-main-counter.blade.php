@@ -1,4 +1,4 @@
-<div>
+<div class="pr-3">
     <div>Produits dans le panier : {{ $cartItemsCount }}</div>
     @if ($cartItemsCount > 0)
         <button
