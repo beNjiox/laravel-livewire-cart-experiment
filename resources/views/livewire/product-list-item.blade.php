@@ -1,4 +1,4 @@
-<div class="flex w-full justify-between p-2 xl:w-1/2 xl:justify-start">
+<div class="flex w-full justify-between p-2 xl:w-1/2 xl:justify-start" dusk="list-item-{{ $product->slug }}">
     <div class="w-1/2">
         <div class="text-2xl">{{ $product->name }}</div>
         <div class="mt-5 font-light">${{ number_format($product->amount_in_cents / 100, 2) }}</div>

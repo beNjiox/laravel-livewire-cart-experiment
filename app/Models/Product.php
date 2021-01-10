@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Str;
 
 /**
  * App\Models\Product
@@ -26,6 +27,11 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    public function getSlugAttribute()
+    {
+        return Str::of($this->name)->slug()->__toString();
+    }
 
     protected $guarded = [];
 }
