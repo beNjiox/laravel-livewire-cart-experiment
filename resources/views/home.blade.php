@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <livewire:home-product-list wire:model="products" />
+    <livewire:catalog :products="$products"/>
+
+    <livewire:home-product-list :products="$products"/>
 @endsection

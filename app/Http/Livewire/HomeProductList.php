@@ -8,12 +8,7 @@ use Livewire\Component;
 
 class HomeProductList extends Component
 {
-    public Collection $products;
-
-    public function mount()
-    {
-        $this->products = Product::query()->orderBy('name')->get();
-    }
+    public $products;
 
     public function render()
     {

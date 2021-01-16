@@ -11,12 +11,20 @@ class ProductListItem extends Component
     public Product $product;
     public int $quantityInCart = 0;
 
-    protected $listeners = ['clearCart' => 'resetQuantity'];
+    protected $listeners = [
+        'clearCart' => 'resetQuantity',
+        'itemUpdated'
+    ];
 
     public function resetQuantity()
     {
         Log::info("ProductListItem :: {$this->product->name} : resetQuantity (Removing $this->quantityInCart quantity)");
         $this->quantityUpdated($this->quantityInCart * -1);
+    }
+
+    public function itemUpdated()
+    {
+        $this->product->fresh();
     }
 
     public function addToCart()
@@ -27,7 +35,7 @@ class ProductListItem extends Component
     public function removeFromCart()
     {
         if ($this->quantityInCart === 0) {
-            return ;
+            return;
         }
 
         $this->quantityUpdated(-1);
